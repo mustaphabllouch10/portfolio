@@ -1,4 +1,7 @@
 import meImage from "../assets/me.jpeg";
+import checkinImage from "../assets/checkin.png";
+import dashboardImage from "../assets/dashboard.png";
+import membersImage from "../assets/members.png";
 
 export const navItems = [
   { name: "Home", href: "/" },
@@ -127,13 +130,12 @@ export const skillsContent = {
 export const projectsContent = [
   {
     id: 1,
-    title: "Commerce Hub",
+    title: "GymFLow",
     description:
-      "A modern ecommerce admin platform for tracking products, orders, and customer insights with a clean dashboard experience.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+      "Developed a comprehensive gym management system designed to simplify daily operations for fitness centers. The platform allows administrators to manage members, employees, subscriptions, and attendance records through a centralized dashboard. Members can check in and out using QR codes, enabling fast and accurate attendance tracking. The system also provides tools for monitoring active memberships, managing subscription plans, tracking employee activities, and generating insights to improve overall gym management efficiency.",
+    images: [checkinImage, dashboardImage, membersImage],
     technologies: ["React", "Laravel", "MySQL", "Tailwind"],
-    features: ["Admin dashboard", "Order management", "Insights views"],
+    features: ["Admin dashboard", "QR code scanner", "Insights views"],
     challenges: ["Complex inventory rules", "Multi-role permissions"],
     lessons: [
       "Structure APIs around business flows",
@@ -179,19 +181,19 @@ export const projectsContent = [
 export const experienceContent = [
   {
     title: "Education",
-    period: "2020 — Present",
+    period: "2024 — 2026",
     description:
       "Studied software engineering principles, modern architecture, and independent product development through hands-on projects.",
   },
   {
-    title: "Freelance Development",
-    period: "2023 — Present",
+    title: "internship",
+    period: "1 month",
     description:
-      "Built client-facing web applications with a focus on polished UI, dependable APIs, and maintainable code.",
+      "Developed an internal employee management platform during my internship that streamlines daily operations within the company. The system enables employees to view and manage their daily tasks, while providing administrators with tools to track expenses, monitor attendance through a fingerprint-based time tracking system, and manage employee records. It also includes WhatsApp integration to improve communication and automate notifications across the organization.",
   },
   {
     title: "Personal Projects",
-    period: "2021 — Present",
+    period: "2025 — Present",
     description:
       "Created polished web experiences centered on maintainability, performance, and strong developer workflows.",
   },

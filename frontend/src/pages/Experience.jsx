@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
+import { experienceContent } from '../constants/content'
 import { getExperience } from '../services/api'
 
 const Experience = () => {
-  const [items, setItems] = useState([])
+  const [items, setItems] = useState(experienceContent)
 
   useEffect(() => {
-    getExperience().then(({ data }) => setItems(data))
+    getExperience()
+      .then(({ data }) => setItems(Array.isArray(data) && data.length ? data : experienceContent))
+      .catch(() => setItems(experienceContent))
   }, [])
 
   return (

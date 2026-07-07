@@ -2,20 +2,30 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
 import SkillIcon from '../components/SkillIcon'
+import { skillsContent } from '../constants/content'
 import { getSkills } from '../services/api'
 
+const buildSkillGroups = (data) => {
+  const source = Array.isArray(data) && data.length
+    ? data
+    : skillsContent.groups.flatMap((group) => group.items.map((item) => ({ ...item, group: group.title })))
+
+  const grouped = source.reduce((accumulator, item) => {
+    if (!accumulator[item.group]) accumulator[item.group] = []
+    accumulator[item.group].push(item)
+    return accumulator
+  }, {})
+
+  return Object.entries(grouped).map(([title, items]) => ({ title, items }))
+}
+
 const Skills = () => {
-  const [groups, setGroups] = useState([])
+  const [groups, setGroups] = useState(() => buildSkillGroups([]))
 
   useEffect(() => {
-    getSkills().then(({ data }) => {
-      const grouped = data.reduce((accumulator, item) => {
-        if (!accumulator[item.group]) accumulator[item.group] = []
-        accumulator[item.group].push(item)
-        return accumulator
-      }, {})
-      setGroups(Object.entries(grouped).map(([title, items]) => ({ title, items })))
-    })
+    getSkills()
+      .then(({ data }) => setGroups(buildSkillGroups(data)))
+      .catch(() => setGroups(buildSkillGroups([])))
   }, [])
 
   return (
