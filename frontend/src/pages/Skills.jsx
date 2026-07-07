@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
+import SkillIcon from '../components/SkillIcon'
 import { getSkills } from '../services/api'
 
 const Skills = () => {
@@ -28,7 +29,12 @@ const Skills = () => {
               {group.items.map((item) => (
                 <div key={item.id} className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="flex items-center gap-2 text-slate-300"><span>{item.icon}</span>{item.name}</span>
+                    <span className="flex items-center gap-2 text-slate-300">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-blue-400">
+                        <SkillIcon icon={item.icon} className="h-4 w-4" />
+                      </span>
+                      {item.name}
+                    </span>
                     <span className="text-slate-400">{item.level}</span>
                   </div>
                   <div className="h-2 rounded-full bg-white/10">

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download, GitBranch, Link2 } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
 import SectionHeading from '../components/SectionHeading'
+import SkillIcon from '../components/SkillIcon'
 import { aboutContent, heroContent, projectsContent, skillsContent, experienceContent, profile } from '../constants/content'
 
 const Home = () => {
@@ -31,9 +32,11 @@ const Home = () => {
               <a href={profile.github} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
                 <GitBranch size={16} /> GitHub
               </a>
-              <a href={profile.linkedin} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
-                <Link2 size={16} /> LinkedIn
-              </a>
+              {profile.linkedin ? (
+                <a href={profile.linkedin} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
+                  <Link2 size={16} /> LinkedIn
+                </a>
+              ) : null}
             </div>
             <div className="flex flex-wrap gap-3 text-sm text-slate-400">
               {heroContent.stats.map((stat) => (
@@ -47,7 +50,11 @@ const Home = () => {
           <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="relative mx-auto w-full max-w-md">
             <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-blue-500/20 via-transparent to-slate-600/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/60 p-4 backdrop-blur-xl">
-              <div className="aspect-[4/5] rounded-[1.5rem] bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.18),_transparent_40%),linear-gradient(135deg,#111827,#090909)]" />
+              <img
+                src={profile.image}
+                alt={profile.name}
+                className="aspect-[4/5] w-full rounded-[1.5rem] object-cover"
+              />
               <div className="mt-4 rounded-[1.25rem] border border-white/10 p-4 text-sm text-slate-400">
                 <p className="text-white">Focused on thoughtful interfaces and dependable systems.</p>
               </div>
@@ -113,7 +120,12 @@ const Home = () => {
                 {group.items.map((item) => (
                   <div key={item.name} className="space-y-2">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="flex items-center gap-2 text-slate-300"><span>{item.icon}</span>{item.name}</span>
+                      <span className="flex items-center gap-2 text-slate-300">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-blue-400">
+                          <SkillIcon icon={item.icon} className="h-4 w-4" />
+                        </span>
+                        {item.name}
+                      </span>
                       <span className="text-slate-400">{item.level}</span>
                     </div>
                     <div className="h-2 rounded-full bg-white/10">

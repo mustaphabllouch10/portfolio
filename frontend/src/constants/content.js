@@ -1,3 +1,5 @@
+import meImage from "../assets/me.jpeg";
+
 export const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -14,16 +16,17 @@ export const profile = {
     "I build modern, scalable web applications with Laravel, React, Node.js, and cloud technologies while continuously improving system reliability and developer experience.",
   email: "mustaphabllouch10@gmail.com",
   github: "https://github.com/mustaphabllouch10",
-  linkedin: "www.linkedin.",
+  linkedin: "http://www.linkedin.com/in/MustaphaBllouch10",
   location: "Agadir, Morocco",
   cvUrl: "/cv.pdf",
+  image: meImage,
 };
 
 export const heroContent = {
   name: profile.name,
   title: profile.title,
   description: profile.description,
-  stats: ["6+ Projects", "3+ Years Building", "Laravel", "React"],
+  stats: ["React", "Express", "Laravel", "Javascript", "MySQL", "MongoDB"],
 };
 
 export const aboutContent = {
@@ -68,39 +71,54 @@ export const skillsContent = {
     {
       title: "Frontend",
       items: [
-        { name: "React", level: "Advanced", icon: "⚛️", progress: 92 },
-        { name: "JavaScript", level: "Advanced", icon: "📜", progress: 90 },
-        { name: "HTML", level: "Advanced", icon: "🌐", progress: 94 },
-        { name: "CSS", level: "Advanced", icon: "🎨", progress: 91 },
-        { name: "Tailwind", level: "Advanced", icon: "🪄", progress: 93 },
+        { name: "React", level: "Advanced", icon: "react", progress: 92 },
+        {
+          name: "JavaScript",
+          level: "Advanced",
+          icon: "javascript",
+          progress: 90,
+        },
+        { name: "HTML", level: "Advanced", icon: "code2", progress: 94 },
+        { name: "CSS", level: "Advanced", icon: "palette", progress: 91 },
+        { name: "Tailwind", level: "Advanced", icon: "sparkles", progress: 93 },
       ],
     },
     {
       title: "Backend",
       items: [
-        { name: "Laravel", level: "Advanced", icon: "🧱", progress: 90 },
-        { name: "PHP", level: "Intermediate", icon: "🐘", progress: 86 },
-        { name: "Node.js", level: "Intermediate", icon: "🟢", progress: 82 },
-        { name: "Express", level: "Intermediate", icon: "⚡", progress: 78 },
+        { name: "Laravel", level: "Advanced", icon: "server", progress: 90 },
+        { name: "PHP", level: "Intermediate", icon: "database", progress: 86 },
+        { name: "Node.js", level: "Intermediate", icon: "cpu", progress: 82 },
+        { name: "Express", level: "Intermediate", icon: "zap", progress: 78 },
       ],
     },
     {
       title: "Databases",
       items: [
-        { name: "MySQL", level: "Advanced", icon: "🗄️", progress: 88 },
-        { name: "MongoDB", level: "Intermediate", icon: "🍃", progress: 74 },
+        { name: "MySQL", level: "Advanced", icon: "database", progress: 88 },
+        {
+          name: "MongoDB",
+          level: "Intermediate",
+          icon: "database",
+          progress: 74,
+        },
       ],
     },
     {
       title: "Tools",
       items: [
-        { name: "Git", level: "Advanced", icon: "🧰", progress: 90 },
-        { name: "GitHub", level: "Advanced", icon: "🐙", progress: 92 },
-        { name: "VS Code", level: "Advanced", icon: "💻", progress: 95 },
-        { name: "Postman", level: "Intermediate", icon: "📬", progress: 80 },
-        { name: "Docker", level: "Learning", icon: "🐳", progress: 60 },
-        { name: "Linux", level: "Learning", icon: "🐧", progress: 64 },
-        { name: "DevOps", level: "Learning", icon: "☁️", progress: 58 },
+        { name: "Git", level: "Advanced", icon: "gitBranch", progress: 90 },
+        { name: "GitHub", level: "Advanced", icon: "github", progress: 92 },
+        {
+          name: "VS Code",
+          level: "Advanced",
+          icon: "terminalSquare",
+          progress: 95,
+        },
+        { name: "Postman", level: "Intermediate", icon: "send", progress: 80 },
+        { name: "Docker", level: "Learning", icon: "container", progress: 10 },
+        { name: "Linux", level: "Learning", icon: "terminal", progress: 10 },
+        { name: "DevOps", level: "Learning", icon: "cloud", progress: 10 },
       ],
     },
   ],
