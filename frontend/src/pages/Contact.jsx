@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
 import { useState } from 'react'
 import SectionHeading from '../components/SectionHeading'
+import { profile } from '../constants/content'
 import { submitContact } from '../services/api'
 
 const Contact = () => {
@@ -27,9 +28,9 @@ const Contact = () => {
         <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">
           <p className="text-lg leading-8 text-slate-400">Open to freelance work, thoughtful product teams, and ambitious side projects.</p>
           <div className="mt-8 space-y-3 text-sm text-slate-400">
-            <p>📍 London, United Kingdom</p>
-            <p>✉️ hello@alexander.dev</p>
-            <p>🔗 github.com/alexander</p>
+            <p>📍 {profile.location}</p>
+            <p>✉️ {profile.email}</p>
+            <p>🔗 {profile.github}</p>
           </div>
         </motion.div>
         <motion.form initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} onSubmit={handleSubmit} className="space-y-4 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8">

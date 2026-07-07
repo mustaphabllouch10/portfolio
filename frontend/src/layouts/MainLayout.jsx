@@ -2,7 +2,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowUp, Menu, Search, Sparkles } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { navItems } from '../constants/content'
+import { navItems, profile } from '../constants/content'
 import useScrollProgress from '../hooks/useScrollProgress'
 import useTheme from '../hooks/useTheme'
 import CommandPalette from '../components/CommandPalette'
@@ -46,7 +46,7 @@ const MainLayout = ({ children }) => {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#090909]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link to="/" className="text-lg font-semibold tracking-[0.25em] text-white">
-            ALEXANDER
+            {profile.name.toUpperCase()}
           </Link>
           <nav className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
@@ -92,10 +92,10 @@ const MainLayout = ({ children }) => {
 
       <footer className="border-t border-white/10 bg-black/70">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-8 text-sm text-slate-400 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© 2026 Alexander Reed. Built with React and Laravel.</p>
+          <p>© 2026 {profile.name}. Built with React and Laravel.</p>
           <div className="flex items-center gap-4">
-            <a href="https://github.com" className="transition hover:text-white">GitHub</a>
-            <a href="https://linkedin.com" className="transition hover:text-white">LinkedIn</a>
+            <a href={profile.github} className="transition hover:text-white">GitHub</a>
+            <a href={profile.linkedin} className="transition hover:text-white">LinkedIn</a>
             <button type="button" onClick={scrollToTop} className="rounded-full border border-white/10 p-2 transition hover:border-blue-400 hover:text-white" aria-label="Scroll to top">
               <ArrowUp size={16} />
             </button>

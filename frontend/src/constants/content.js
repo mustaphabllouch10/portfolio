@@ -7,41 +7,52 @@ export const navItems = [
   { name: "Contact", href: "/contact" },
 ];
 
-export const heroContent = {
-  name: "Alexander Reed",
+export const profile = {
+  name: "Mustapha bllouch",
   title: "Full Stack Web Developer",
   description:
-    "I build modern, scalable web applications using Laravel, React, Node.js, and cloud technologies while continuously exploring DevOps.",
-  stats: ["4+ Projects", "2+ Years Learning", "Laravel", "React"],
+    "I build modern, scalable web applications with Laravel, React, Node.js, and cloud technologies while continuously improving system reliability and developer experience.",
+  email: "mustaphabllouch10@gmail.com",
+  github: "https://github.com/mustaphabllouch10",
+  linkedin: "www.linkedin.",
+  location: "Agadir, Morocco",
+  cvUrl: "/cv.pdf",
+};
+
+export const heroContent = {
+  name: profile.name,
+  title: profile.title,
+  description: profile.description,
+  stats: ["6+ Projects", "3+ Years Building", "Laravel", "React"],
 };
 
 export const aboutContent = {
   intro:
-    "I started learning web development with a strong curiosity for building products that feel effortless and perform reliably. Over time, that interest grew into a focus on backend architecture, system design, and creating maintainable software.",
+    "I started learning web development because I wanted to create products that solve real problems and feel effortless to use. Over time, that curiosity grew into a focus on backend architecture, clear APIs, and maintainable software systems.",
   milestones: [
     {
-      year: "2019",
+      year: "2020",
       title: "Started learning web development",
       description:
-        "Explored HTML, CSS, JavaScript, and built a foundation in creating interactive experiences.",
+        "Explored HTML, CSS, JavaScript, and built a strong foundation for creating interactive experiences.",
     },
     {
-      year: "2021",
-      title: "Built multiple projects",
+      year: "2022",
+      title: "Built multiple full-stack projects",
       description:
-        "Developed full-stack apps and sharpened my approach to product thinking and implementation.",
+        "Delivered personal and client-facing applications using modern React and Laravel workflows.",
     },
     {
-      year: "2023",
+      year: "2024",
       title: "Focused on backend architecture",
       description:
-        "Deepened my understanding of APIs, databases, authentication, and clean service design.",
+        "Deepened my understanding of APIs, database design, authentication, and scalable service patterns.",
     },
     {
-      year: "2025",
-      title: "Learning DevOps and scalable systems",
+      year: "2026",
+      title: "Exploring DevOps and cloud deployment",
       description:
-        "Expanded my work into deployment pipelines, observability, and resilient infrastructure.",
+        "Continuing to improve reliability through automation, deployment pipelines, and observability.",
     },
   ],
   highlights: [
@@ -98,51 +109,51 @@ export const skillsContent = {
 export const projectsContent = [
   {
     id: 1,
-    title: "Northstar Analytics",
+    title: "Commerce Hub",
     description:
-      "A modern analytics dashboard built for product teams to understand usage and engagement in real time.",
+      "A modern ecommerce admin platform for tracking products, orders, and customer insights with a clean dashboard experience.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
     technologies: ["React", "Laravel", "MySQL", "Tailwind"],
-    features: ["Real-time KPIs", "Role-based access", "Interactive charts"],
-    challenges: [
-      "Handling high-volume event data",
-      "Designing a maintainable API",
+    features: ["Admin dashboard", "Order management", "Insights views"],
+    challenges: ["Complex inventory rules", "Multi-role permissions"],
+    lessons: [
+      "Structure APIs around business flows",
+      "Design with clarity first",
     ],
-    lessons: ["Invest in API contracts early", "Favor progressive enhancement"],
-    github: "https://github.com",
+    github: profile.github,
     demo: "https://example.com",
   },
   {
     id: 2,
-    title: "Lumen Commerce",
+    title: "Booking Flow",
     description:
-      "An elegant commerce experience designed for speed, clarity, and seamless checkout.",
+      "A fast booking experience for service-based businesses with a polished interface and reliable backend logic.",
     image:
       "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
     technologies: ["React", "Node", "MongoDB", "Express"],
-    features: ["Search and filtering", "Checkout flow", "CMS content blocks"],
-    challenges: ["Optimizing performance", "Simplifying checkout complexity"],
-    lessons: ["Measure before refactoring", "Use server-side validation"],
-    github: "https://github.com",
+    features: [
+      "Dynamic scheduling",
+      "Real-time availability",
+      "User-friendly checkout",
+    ],
+    challenges: ["Conflict handling", "Fast response times"],
+    lessons: ["Validate early", "Keep forms predictable"],
+    github: profile.github,
     demo: "https://example.com",
   },
   {
     id: 3,
-    title: "Horizon Studio",
+    title: "Client Portal",
     description:
-      "A collaborative workspace for creative teams to publish content and manage momentum.",
+      "A collaborative portal designed to help clients review projects, track updates, and share feedback seamlessly.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
     technologies: ["Laravel", "React", "MySQL", "Docker"],
-    features: [
-      "Kanban workflow",
-      "Multimedia uploads",
-      "Shared project spaces",
-    ],
+    features: ["Project updates", "Feedback boards", "Authentication flows"],
     challenges: ["Complex permissions", "Reliable background jobs"],
-    lessons: ["Modularize domain logic", "Document operational processes"],
-    github: "https://github.com",
+    lessons: ["Keep domain logic modular", "Document operational processes"],
+    github: profile.github,
     demo: "https://example.com",
   },
 ];
@@ -152,29 +163,29 @@ export const experienceContent = [
     title: "Education",
     period: "2020 — Present",
     description:
-      "Studied software engineering principles, modern architecture, and independent product development.",
+      "Studied software engineering principles, modern architecture, and independent product development through hands-on projects.",
   },
   {
-    title: "Internship",
-    period: "2023",
+    title: "Freelance Development",
+    period: "2023 — Present",
     description:
-      "Contributed to internal tools, debugging workflows, and API integrations in a fast-moving startup environment.",
+      "Built client-facing web applications with a focus on polished UI, dependable APIs, and maintainable code.",
   },
   {
     title: "Personal Projects",
     period: "2021 — Present",
     description:
-      "Built polished web experiences with a focus on maintainability, speed, and developer experience.",
+      "Created polished web experiences centered on maintainability, performance, and strong developer workflows.",
   },
   {
     title: "Future Goals",
     period: "2026+",
     description:
-      "Expand into distributed systems, platform engineering, and high-scale deployment practices.",
+      "Continue growing into distributed systems, platform engineering, and high-scale deployment practices.",
   },
 ];
 
 export const socialLinks = [
-  { label: "GitHub", url: "https://github.com" },
-  { label: "LinkedIn", url: "https://linkedin.com" },
+  { label: "GitHub", url: profile.github },
+  { label: "LinkedIn", url: profile.linkedin },
 ];

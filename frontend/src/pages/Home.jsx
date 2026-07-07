@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Download, GitBranch, Link2 } from 'lucide-react'
 import AnimatedBackground from '../components/AnimatedBackground'
 import SectionHeading from '../components/SectionHeading'
-import { aboutContent, heroContent, projectsContent, skillsContent, experienceContent } from '../constants/content'
+import { aboutContent, heroContent, projectsContent, skillsContent, experienceContent, profile } from '../constants/content'
 
 const Home = () => {
   return (
@@ -23,15 +23,15 @@ const Home = () => {
               <a href="/projects" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
                 View Projects <ArrowRight size={16} />
               </a>
-              <a href="/contact" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-400 hover:bg-blue-500/10">
+              <a href={profile.cvUrl} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-400 hover:bg-blue-500/10">
                 <Download size={16} /> Download CV
               </a>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a href="https://github.com" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
+              <a href={profile.github} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
                 <GitBranch size={16} /> GitHub
               </a>
-              <a href="https://linkedin.com" className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
+              <a href={profile.linkedin} className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-slate-300 transition hover:border-blue-400 hover:text-white">
                 <Link2 size={16} /> LinkedIn
               </a>
             </div>
