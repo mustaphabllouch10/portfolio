@@ -17,7 +17,7 @@ export const navItems = [
   { name: "Skills", href: "/skills" },
   { name: "Experience", href: "/experience" },
   { name: "Contact", href: "/contact" },
-];
+]; 
 
 export const profile = {
   name: "Mustapha bllouch",

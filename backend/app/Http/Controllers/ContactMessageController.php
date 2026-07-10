@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ContactMessage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactMessageController extends Controller
 {
@@ -21,6 +22,22 @@ class ContactMessageController extends Controller
         ]);
 
         $message = ContactMessage::create($validated);
+
+        try {
+            Mail::raw(
+                "Name: {$validated['name']}\nEmail: {$validated['email']}\n\nMessage:\n{$validated['message']}",
+                function ($mail) use ($validated) {
+                    $mail->to(config('mail.from.address'))
+                        ->subject('New contact message from portfolio website');
+                    $mail->replyTo($validated['email'], $validated['name']);
+                }
+            );
+        } catch (\Throwable $exception) {
+            return response()->json([
+                'message' => $message,
+                'mail_error' => 'Email delivery is not configured correctly. Please set a valid SMTP app password.',
+            ], 201);
+        }
 
         return response()->json($message, 201);
     }
