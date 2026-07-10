@@ -1,7 +1,14 @@
 import meImage from "../assets/me.jpeg";
-import checkinImage from "../assets/checkin.png";
-import dashboardImage from "../assets/dashboard.png";
-import membersImage from "../assets/members.png";
+import project1CheckinImage from "../assets/project1/checkin.png";
+import project1DashboardImage from "../assets/project1/dashboard.png";
+import project1MembersImage from "../assets/project1/members.png";
+import project2AnalysisImage from "../assets/project2/analysis.png";
+import project2TasksImage from "../assets/project2/tasks.png";
+import project2TeamImage from "../assets/project2/team.png";
+import project3WordleeImage from "../assets/project3/wordlee.png";
+import project4MovieHomeImage from "../assets/project4/movieHome.png";
+import project4SearchedMovieImage from "../assets/project4/searchedMovie.png";
+import project4TrendingMoviesImage from "../assets/project4/trendingMovies.png";
 
 export const navItems = [
   { name: "Home", href: "/" },
@@ -133,7 +140,11 @@ export const projectsContent = [
     title: "GymFLow",
     description:
       "Developed a comprehensive gym management system designed to simplify daily operations for fitness centers. The platform allows administrators to manage members, employees, subscriptions, and attendance records through a centralized dashboard. Members can check in and out using QR codes, enabling fast and accurate attendance tracking. The system also provides tools for monitoring active memberships, managing subscription plans, tracking employee activities, and generating insights to improve overall gym management efficiency.",
-    images: [checkinImage, dashboardImage, membersImage],
+    images: [
+      project1CheckinImage,
+      project1DashboardImage,
+      project1MembersImage,
+    ],
     technologies: ["React", "Laravel", "MySQL", "Tailwind"],
     features: ["Admin dashboard", "QR code scanner", "Insights views"],
     challenges: ["Complex inventory rules", "Multi-role permissions"],
@@ -146,11 +157,10 @@ export const projectsContent = [
   },
   {
     id: 2,
-    title: "Booking Flow",
+    title: "Project Manager",
     description:
-      "A fast booking experience for service-based businesses with a polished interface and reliable backend logic.",
-    image:
-      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80",
+      "A focused workspace for planning tasks, monitoring team progress, and keeping project details organized in one place.",
+    images: [project2AnalysisImage, project2TasksImage, project2TeamImage],
     technologies: ["React", "Node", "MongoDB", "Express"],
     features: [
       "Dynamic scheduling",
@@ -164,15 +174,38 @@ export const projectsContent = [
   },
   {
     id: 3,
-    title: "Client Portal",
+    title: "Wordlee Clone",
     description:
-      "A collaborative portal designed to help clients review projects, track updates, and share feedback seamlessly.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+      "A polished word puzzle experience built with a simple, engaging interface and smooth daily gameplay flow.",
+    images: [project3WordleeImage],
     technologies: ["Laravel", "React", "MySQL", "Docker"],
     features: ["Project updates", "Feedback boards", "Authentication flows"],
     challenges: ["Complex permissions", "Reliable background jobs"],
     lessons: ["Keep domain logic modular", "Document operational processes"],
+    github: profile.github,
+    demo: "https://example.com",
+  },
+  {
+    id: 4,
+    title: "MovieFlix",
+    description:
+      "A movie discovery app with a cinematic homepage, intelligent search, and trending collections for browsing new releases.",
+    images: [
+      project4MovieHomeImage,
+      project4SearchedMovieImage,
+      project4TrendingMoviesImage,
+    ],
+    technologies: ["React", "Vite", "Tailwind", "TMDB API"],
+    features: [
+      "Trending catalog",
+      "Search experience",
+      "Movie detail browsing",
+    ],
+    challenges: ["API state handling", "Responsive media layouts"],
+    lessons: [
+      "Keep UI feedback immediate",
+      "Design around content-first flows",
+    ],
     github: profile.github,
     demo: "https://example.com",
   },

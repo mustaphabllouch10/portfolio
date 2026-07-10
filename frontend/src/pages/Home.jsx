@@ -5,6 +5,14 @@ import SectionHeading from '../components/SectionHeading'
 import SkillIcon from '../components/SkillIcon'
 import { aboutContent, heroContent, projectsContent, skillsContent, experienceContent, profile } from '../constants/content'
 
+const getProjectImage = (project) => {
+  if (Array.isArray(project?.images) && project.images.length > 0) {
+    return project.images[0]
+  }
+
+  return project?.image || ''
+}
+
 const Home = () => {
   return (
     <div className="space-y-24 pb-16">
@@ -89,7 +97,7 @@ const Home = () => {
         <div className="grid gap-6 lg:grid-cols-3">
           {projectsContent.map((project, index) => (
             <motion.article key={project.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ delay: index * 0.08 }} className="group overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.03]">
-              <img src={project.image} alt={project.title} className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <img src={getProjectImage(project)} alt={project.title} className="h-48 w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
               <div className="space-y-4 p-6">
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-white">{project.title}</h3>
