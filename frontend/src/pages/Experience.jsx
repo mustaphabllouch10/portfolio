@@ -7,11 +7,7 @@ import { getExperience } from '../services/api'
 const Experience = () => {
   const [items, setItems] = useState(experienceContent)
 
-  useEffect(() => {
-    getExperience()
-      .then(({ data }) => setItems(Array.isArray(data) && data.length ? data : experienceContent))
-      .catch(() => setItems(experienceContent))
-  }, [])
+
 
   return (
     <div className="space-y-8 pb-16">

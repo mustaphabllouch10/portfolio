@@ -71,15 +71,7 @@ const Projects = () => {
   const [filter, setFilter] = useState('All')
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    getProjects()
-      .then(({ data }) => {
-        const nextProjects = Array.isArray(data) && data.length ? data : projectsContent
-        setProjects(nextProjects)
-      })
-      .catch(() => setProjects(projectsContent))
-      .finally(() => setLoading(false))
-  }, [])
+
 
   const technologies = useMemo(() => {
     const items = new Set(['All'])

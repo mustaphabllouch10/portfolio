@@ -22,11 +22,7 @@ const buildSkillGroups = (data) => {
 const Skills = () => {
   const [groups, setGroups] = useState(() => buildSkillGroups([]))
 
-  useEffect(() => {
-    getSkills()
-      .then(({ data }) => setGroups(buildSkillGroups(data)))
-      .catch(() => setGroups(buildSkillGroups([])))
-  }, [])
+
 
   return (
     <div className="space-y-8 pb-16">
