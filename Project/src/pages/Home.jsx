@@ -32,7 +32,7 @@ const Home = () => {
               <a href="/projects" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
                 View Projects <ArrowRight size={16} />
               </a>
-              <a href={profile.cvUrl} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-400 hover:bg-blue-500/10">
+              <a   href="/CV.pdf" download="Mustapha_Bllouch_CV.pdf" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-400 hover:bg-blue-500/10">
                 <Download size={16} /> Download CV
               </a>
             </div>

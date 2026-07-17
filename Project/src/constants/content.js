@@ -28,7 +28,7 @@ export const profile = {
   github: "https://github.com/mustaphabllouch10",
   linkedin: "http://www.linkedin.com/in/MustaphaBllouch10",
   location: "Agadir, Morocco",
-  cvUrl: "/cv.pdf",
+  cvUrl: "../assets/CV.pdf",
   image: meImage,
 };
 
