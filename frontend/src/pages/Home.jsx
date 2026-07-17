@@ -110,7 +110,7 @@ const Home = () => {
                 </div>
                 <div className="flex gap-3">
                   <a href={project.github} className="text-sm text-slate-300 transition hover:text-white">GitHub</a>
-                  <a href={project.demo} className="text-sm text-slate-300 transition hover:text-white">Live Demo</a>
+                  <a href={project.demo} className="text-sm text-slate-300 transition hover:text-white">Repo</a>
                 </div>
               </div>
             </motion.article>

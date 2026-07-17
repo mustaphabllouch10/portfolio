@@ -65,9 +65,7 @@ const MainLayout = ({ children }) => {
             <button type="button" onClick={() => setCommandOpen(true)} className="hidden rounded-full border border-white/10 p-2 text-slate-300 transition hover:border-blue-400 hover:text-white md:inline-flex" aria-label="Open command palette">
               <Search size={18} />
             </button>
-            <button type="button" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="rounded-full border border-white/10 p-2 text-slate-300 transition hover:border-blue-400 hover:text-white" aria-label="Toggle theme">
-              <Sparkles size={18} />
-            </button>
+            <div className="hidden h-10 w-10 md:block"></div>
             <button type="button" className="rounded-full border border-white/10 p-2 text-slate-300 md:hidden" onClick={() => setMenuOpen((value) => !value)} aria-label="Toggle menu">
               <Menu size={18} />
             </button>

@@ -153,7 +153,7 @@ export const projectsContent = [
       "Design with clarity first",
     ],
     github: profile.github,
-    demo: "https://example.com",
+    demo: "https://github.com/mustaphabllouch10/GymFlow.git",
   },
   {
     id: 2,
@@ -161,7 +161,7 @@ export const projectsContent = [
     description:
       "A focused workspace for planning tasks, monitoring team progress, and keeping project details organized in one place.",
     images: [project2AnalysisImage, project2TasksImage, project2TeamImage],
-    technologies: ["React", "Node", "MongoDB", "Express"],
+    technologies: ["React"],
     features: [
       "Dynamic scheduling",
       "Real-time availability",
@@ -170,7 +170,7 @@ export const projectsContent = [
     challenges: ["Conflict handling", "Fast response times"],
     lessons: ["Validate early", "Keep forms predictable"],
     github: profile.github,
-    demo: "https://example.com",
+    demo: "https://github.com/mustaphabllouch10/taskManager-Pro.git",
   },
   {
     id: 3,
@@ -183,7 +183,7 @@ export const projectsContent = [
     challenges: ["Complex permissions", "Reliable background jobs"],
     lessons: ["Keep domain logic modular", "Document operational processes"],
     github: profile.github,
-    demo: "https://example.com",
+    demo: "https://github.com/mustaphabllouch10/wordle.git",
   },
   {
     id: 4,
@@ -207,7 +207,7 @@ export const projectsContent = [
       "Design around content-first flows",
     ],
     github: profile.github,
-    demo: "https://example.com",
+    demo: "https://github.com/mustaphabllouch10/MovieFlix.git",
   },
 ];
 
