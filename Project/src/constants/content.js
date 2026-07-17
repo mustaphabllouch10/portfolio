@@ -145,7 +145,7 @@ export const projectsContent = [
       project1DashboardImage,
       project1MembersImage,
     ],
-    technologies: ["React", "Laravel", "MySQL", "Tailwind"],
+    technologies: ["React" , "vite" , "Laravel", "MySQL", "Tailwind"],
     features: ["Admin dashboard", "QR code scanner", "Insights views"],
     challenges: ["Complex inventory rules", "Multi-role permissions"],
     lessons: [
@@ -161,7 +161,7 @@ export const projectsContent = [
     description:
       "A focused workspace for planning tasks, monitoring team progress, and keeping project details organized in one place.",
     images: [project2AnalysisImage, project2TasksImage, project2TeamImage],
-    technologies: ["React"],
+    technologies: ["React" , "vite" ],
     features: [
       "Dynamic scheduling",
       "Real-time availability",
@@ -178,7 +178,7 @@ export const projectsContent = [
     description:
       "A polished word puzzle experience built with a simple, engaging interface and smooth daily gameplay flow.",
     images: [project3WordleeImage],
-    technologies: ["Laravel", "React", "MySQL", "Docker"],
+    technologies: [ "React" , "Vite" , "API"],
     features: ["Project updates", "Feedback boards", "Authentication flows"],
     challenges: ["Complex permissions", "Reliable background jobs"],
     lessons: ["Keep domain logic modular", "Document operational processes"],
